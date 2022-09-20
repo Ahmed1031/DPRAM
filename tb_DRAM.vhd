@@ -6,7 +6,11 @@ use std.env.stop;
 
 LIBRARY STD;
 USE MODELSIM_LIB.UTIL.ALL;
-
+-------------------------
+-- Author : Ahmed Asim Ghouri 
+-- Version : 1.1 
+-- Changes : changing the frequency of read side B 
+---------------------------------------------------
 ENTITY tb_DPRAM IS
 END ENTITY;
 
@@ -57,9 +61,9 @@ END PROCESS Side_A_Clock;
 Side_B_Clock :PROCESS        
 BEGIN
   	tb_clk_b <= '0';
-    WAIT FOR clk_period/4; 
+    WAIT FOR clk_period/5; 
    tb_clk_b <= '1';
-   WAIT FOR clk_period/4;
+   WAIT FOR clk_period/5;
 END PROCESS Side_B_Clock;	
 	
 	
